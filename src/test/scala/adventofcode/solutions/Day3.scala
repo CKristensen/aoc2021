@@ -4,11 +4,7 @@ import org.scalacheck.Properties
 import org.scalacheck.Prop.forAll
 import org.scalacheck.Gen
 
-object StringSpecification extends Properties("String") {
-
-  property("startsWith") = forAll { (a: String, b: String) =>
-    (a + b).startsWith(a)
-  }
+object Day3Spec extends Properties("String") {
 
   val bit             = Gen.choose(0, 1)
   def listBit(n: Int) = Gen.listOfN(n, bit)
